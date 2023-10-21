@@ -1,0 +1,33 @@
+public class Estudiante{
+	
+	private String Nombre, Nci;
+	private float Promedio;
+	private int Nota1, Nota2, Nota3;
+	
+	public Estudiante(String n, String nci, int n1, int n2, int n3){
+		
+		Nombre = n;
+		Nci = nci;
+		Promedio = (Nota1 + Nota2 + Nota3)/3;
+		Nota1 = n1;
+		Nota2 = n2;
+		Nota3 = n3;
+	}
+	
+	public Estudiante(){
+		
+		Nombre = Nci = "";
+		//Promedio = 0;
+		Nota1 = Nota2 = Nota3 = 0;		
+	}
+	
+	public String toString(){
+		
+		return "El estudiante "+Nombre+" con cedula: "+Nci+", sus notas son: "+Nota1+","+Nota2+","+Nota3+".Su promedio es de: "+Promedio;
+		
+	}
+	
+	public String getNci(){return Nci;}
+	public float getPromedio(){return Promedio;}
+
+}

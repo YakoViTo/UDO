@@ -1,0 +1,17 @@
+public class Seccion{
+	
+	private Estudiante e[];
+	private int Contador;
+	
+	public Seccion(int x){
+		
+		e = new Estudiante[x];
+		Contador = 0;
+	}
+	
+	public String Agregar(Estudiante k){
+		
+		
+	}
+
+}

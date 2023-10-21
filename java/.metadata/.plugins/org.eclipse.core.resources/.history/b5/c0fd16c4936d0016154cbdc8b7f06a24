@@ -1,0 +1,88 @@
+import java.io.*;
+
+public class PruebaElecciones 
+{
+	public static BufferedReader Leer()
+	{
+		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+		return br;
+	}
+	
+	public static int LeerEntero()
+	{
+		int i = 0;
+		boolean sw;
+		do
+		{
+			sw = false;
+			try
+			{
+				i = Integer.parseInt(Leer().readLine());
+			}
+			
+			catch (Exception e)
+			{
+				System.out.println("Ha ocurrido un error. \n");
+				sw = true;
+			}
+		} while (sw);
+		return i;
+	}
+	
+	public static void main(String[] args)
+	{
+		Elecciones e = new Elecciones();
+		int Op = 0;
+		boolean Operacion, Metodo;
+		Metodo = false;
+		do
+		{
+			System.out.print("¿Que desea hacer? \n1.Votar. \n2.Ver resultados. \nOpcion: ");
+			Op = LeerEntero();
+			switch (Op)
+			{
+				case 1:
+					do
+					{
+						Operacion = false;
+						System.out.print("¿Por quien desea votar? \n1.MAG (Nombre del candidato: Perez, Pedro). \n2.SS (Nombre del candidato: Garcia, Pablo). \nOpcion: ");
+						Op = LeerEntero();
+						switch(Op)
+						{
+							case 1:
+								e.Votar("MAG");
+								break;
+								
+							case 2:
+								e.Votar("SS");
+								break;
+								
+							default:
+								System.out.println("Opcion invalida, intente de nuevo. \n");
+								Operacion = true;
+								break;
+						}
+					} while (Operacion != false);
+					break;
+					
+				case 2:
+					if (e.getContador() == 0 && e.getContador2() == 0)
+						{
+							System.out.println("Un partido debe tener al menos un voto. \n");
+							Metodo = false;
+						}
+					
+					else
+						{
+							System.out.println(e.toString());
+							Metodo = true;
+						}
+					break;
+					
+				default:
+					System.out.println("Opcion invalida, intente de nuevo. \n");
+					break;
+			}
+		} while (!Metodo);
+	}
+}

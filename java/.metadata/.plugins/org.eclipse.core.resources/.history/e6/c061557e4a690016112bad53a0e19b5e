@@ -1,0 +1,47 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class AgregarVentana{
+	
+	public static void createFrame(Arreglo x, JButton bMostrar){
+		
+		JLabel lTitulo, lX1, lX2, lX3, lX4;
+		lTitulo = new JLabel("¿Que desea agregar?");
+		lX1 = new JLabel("");
+		lX2 = new JLabel("");
+		lX3 = new JLabel("");
+		lX4 = new JLabel("");
+		
+		JTextField tX1, tX2, tX3, tX4;
+		tX1 = new JTextField(3);
+		tX2 = new JTextField(3);
+		tX3 = new JTextField(3);
+		tX4 = new JTextField(3);
+		
+		JRadioButton rbLinea, rbRect, rbCir;
+		rbLinea = new JRadioButton("Linea");
+		rbRect = new JRadioButton("Rectangulo");
+		rbCir = new JRadioButton("Circulo");
+		
+		ButtonGroup bg = new ButtonGroup();
+		
+		JButton bAceptar, bLimpiar;
+		bAceptar = new JButton("Aceptar");
+		bLimpiar = new JButton("Limpiar");
+		
+		JFrame frame = new JFrame("Agregar");
+		
+		EventQueue.invokeLater(new Runnable(){
+			
+			public void run(){
+				
+				frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				
+				frame.setSize(690, 400);
+				
+			}
+		});
+		
+	}
+}

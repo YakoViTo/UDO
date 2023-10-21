@@ -1,0 +1,19 @@
+int leerEntero(const string& message) {
+	int num = 0;
+	do {
+		try {
+			cout << message;
+			cin >> num;
+			if (cin.fail()) {
+				cin.clear();
+				for (char ch; cin >> ch && !isdigit(ch);)
+					throw runtime_error("Error de entrada.");
+			}
+			break;
+		}
+		catch (runtime_error e) {
+			cout << e.what() << endl;
+		}
+	} while (true);
+	return num;
+}

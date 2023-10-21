@@ -1,0 +1,24 @@
+Nombre: Gonzalo
+Apellido: Rodulfo
+Edad: 19
+Telefono: 04248272348
+E-mail: gonzalorodulfo@gmail.com
+
+--------------
+
+Nombre: Gonzalo
+Apellido: Rodulfo
+Edad: 19
+Telefono: 54545
+E-mail: ggdddfdf
+
+--------------
+
+Nombre: Jos‚
+Apellido: Rodulfo
+Edad: 19
+Telefono: 5554545
+E-mail: jdjjdjd
+
+--------------
+
